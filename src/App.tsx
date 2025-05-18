@@ -1,14 +1,12 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
+import { SidebarDemo } from './components/layout/Dashboard'
 
 function App() {
 
   return (
     <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="h-full w-full">
+        <SidebarDemo />
       </div>
     </>
   )
