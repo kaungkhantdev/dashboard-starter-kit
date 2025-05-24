@@ -1,5 +1,3 @@
-"use client"
-
 import { ChevronRight, type LucideIcon } from "lucide-react"
 
 import {
@@ -17,9 +15,11 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import { useLocation, Link } from "react-router"
 
 export function NavMain({
   items,
+  subTitle,
 }: {
   items: {
     title: string
@@ -30,11 +30,13 @@ export function NavMain({
       title: string
       url: string
     }[]
-  }[]
+  }[],
+  subTitle?: string
 }) {
+  const { pathname } = useLocation();
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Platform</SidebarGroupLabel>
+      <SidebarGroupLabel>{subTitle}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible
@@ -55,10 +57,13 @@ export function NavMain({
                 <SidebarMenuSub>
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
+                      <SidebarMenuSubButton asChild
+                        className="data-[is-active=true]:bg-primary/10 data-[is-active=true]:text-primary"
+                        data-is-active={subItem.url === pathname}
+                      >
+                        <Link to={subItem.url}>
                           <span>{subItem.title}</span>
-                        </a>
+                        </Link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   ))}

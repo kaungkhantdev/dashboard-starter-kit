@@ -6,6 +6,7 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  LayoutDashboard,
   Map,
   PieChart,
   Settings2,
@@ -13,7 +14,7 @@ import {
 } from "lucide-react"
 
 import { NavMain } from "@/components/sidebar/nav-main"
-import { NavProjects } from "@/components/sidebar/nav-projects"
+// import { NavProjects } from "@/components/sidebar/nav-projects"
 import { NavUser } from "@/components/sidebar/nav-user"
 import { TeamSwitcher } from "@/components/sidebar/team-switcher"
 import {
@@ -23,6 +24,8 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { NavDashboard } from "./nav-dashboard"
+
 
 // This is sample data.
 const data = {
@@ -48,24 +51,30 @@ const data = {
       plan: "Free",
     },
   ],
+  navDashboard:{
+    title: "Dashboard",
+    url: "/dashboard",
+    icon: LayoutDashboard,
+    isActive: true,
+  },
   navMain: [
     {
       title: "Playground",
       url: "#",
       icon: SquareTerminal,
-      isActive: true,
+      // isActive: true,
       items: [
         {
           title: "History",
-          url: "#",
+          url: "/history",
         },
         {
           title: "Starred",
-          url: "#",
+          url: "/starred",
         },
         {
           title: "Settings",
-          url: "#",
+          url: "/settings",
         },
       ],
     },
@@ -76,15 +85,15 @@ const data = {
       items: [
         {
           title: "Genesis",
-          url: "#",
+          url: "/genesis",
         },
         {
           title: "Explorer",
-          url: "#",
+          url: "/explorer",
         },
         {
           title: "Quantum",
-          url: "#",
+          url: "/quantum",
         },
       ],
     },
@@ -95,19 +104,19 @@ const data = {
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/introduction",
         },
         {
           title: "Get Started",
-          url: "#",
+          url: "/get-started",
         },
         {
           title: "Tutorials",
-          url: "#",
+          url: "/tutorials",
         },
         {
           title: "Changelog",
-          url: "#",
+          url: "/changelog",
         },
       ],
     },
@@ -118,19 +127,67 @@ const data = {
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/general",
         },
         {
           title: "Team",
-          url: "#",
+          url: "/team",
         },
         {
           title: "Billing",
-          url: "#",
+          url: "/billing",
         },
         {
           title: "Limits",
-          url: "#",
+          url: "/limits",
+        },
+      ],
+    },
+  ],
+  navSetting: [
+    {
+      title: "Documentation",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "Introduction",
+          url: "/introduction",
+        },
+        {
+          title: "Get Started",
+          url: "/get-started",
+        },
+        {
+          title: "Tutorials",
+          url: "/tutorials",
+        },
+        {
+          title: "Changelog",
+          url: "/changelog",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      url: "#",
+      icon: Settings2,
+      items: [
+        {
+          title: "General",
+          url: "/general",
+        },
+        {
+          title: "Team",
+          url: "/team",
+        },
+        {
+          title: "Billing",
+          url: "/billing",
+        },
+        {
+          title: "Limits",
+          url: "/limits",
         },
       ],
     },
@@ -138,17 +195,17 @@ const data = {
   projects: [
     {
       name: "Design Engineering",
-      url: "#",
+      url: "/projects/design-engineering",
       icon: Frame,
     },
     {
       name: "Sales & Marketing",
-      url: "#",
+      url: "/projects/sales-marketing",
       icon: PieChart,
     },
     {
       name: "Travel",
-      url: "#",
+      url: "/projects/travel",
       icon: Map,
     },
   ],
@@ -161,8 +218,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavDashboard item={data.navDashboard}/>
+        <NavMain items={data.navMain} subTitle="MAIN MENU" />
+        <NavMain items={data.navSetting} subTitle="SETTINGS" />
+        {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
