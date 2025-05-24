@@ -36,7 +36,7 @@ export function NavMain({
   const { pathname } = useLocation();
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>{subTitle}</SidebarGroupLabel>
+      <SidebarGroupLabel className="text-gray-500">{subTitle}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible
