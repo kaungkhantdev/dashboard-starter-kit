@@ -1,6 +1,7 @@
 import { LoginForm } from "@/features/authentication"
-import { GalleryVerticalEnd } from "lucide-react"
+// import { GalleryVerticalEnd } from "lucide-react"
 import CompanyPhoto from '@/assets/company.jpg';
+import { Logo } from "@/components/common/Logo";
 
 
 export default function Login() {
@@ -9,8 +10,11 @@ export default function Login() {
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
-            <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
-              <GalleryVerticalEnd className="size-4" />
+            {/* <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
+              <GalleryVerticalEnd className="size-4 text-white" />
+            </div> */}
+            <div className="border text-primary-foreground flex size-6 items-center justify-center rounded-md">
+              <Logo className="size-3.5" />
             </div>
             Acme Inc.
           </a>

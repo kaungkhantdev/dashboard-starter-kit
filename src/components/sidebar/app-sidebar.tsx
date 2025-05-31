@@ -1,16 +1,17 @@
 import * as React from "react"
 import {
-  AudioWaveform,
+  // AudioWaveform,
   BookOpen,
   Bot,
-  Command,
+  // Command,
   Frame,
-  GalleryVerticalEnd,
+  // GalleryVerticalEnd,
   LayoutDashboard,
   Map,
   PieChart,
   Settings2,
   Shield,
+  ShoppingBag,
   SquareTerminal,
 } from "lucide-react"
 
@@ -26,6 +27,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { NavDashboard } from "./nav-dashboard"
+import { Logo } from "../common/Logo"
 
 
 // This is sample data.
@@ -38,19 +40,19 @@ const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: Logo,
       plan: "Enterprise",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
+    // {
+    //   name: "Acme Corp.",
+    //   logo: AudioWaveform,
+    //   plan: "Startup",
+    // },
+    // {
+    //   name: "Evil Corp.",
+    //   logo: Command,
+    //   plan: "Free",
+    // },
   ],
   navDashboard:{
     title: "Dashboard",
@@ -111,9 +113,9 @@ const data = {
       ],
     },
     {
-      title: "Account",
+      title: "E-Commerce",
       url: "#",
-      icon: BookOpen,
+      icon: ShoppingBag,
       items: [
         {
           title: "Overview",
@@ -183,8 +185,12 @@ const data = {
           url: "/general",
         },
         {
-          title: "Team",
-          url: "/team",
+          title: "Account",
+          url: "/account",
+        },
+        {
+          title: "Appearance",
+          url: "/appearance",
         },
       ],
     },
