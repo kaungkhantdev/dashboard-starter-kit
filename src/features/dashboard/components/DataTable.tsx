@@ -722,7 +722,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
                 </AreaChart>
               </ChartContainer>
               <Separator />
-              <div className="grid gap-2">
+              <div className="grid gap-2 px-4">
                 <div className="flex gap-2 font-medium leading-none">
                   Trending up by 5.2% this month{" "}
                   <TrendingUpIcon className="size-4" />
@@ -736,7 +736,7 @@ function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
               <Separator />
             </>
           )}
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4 px-4">
             <div className="flex flex-col gap-3">
               <Label htmlFor="header">Header</Label>
               <Input id="header" defaultValue={item.header} />

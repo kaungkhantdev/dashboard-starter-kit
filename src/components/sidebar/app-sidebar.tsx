@@ -1,15 +1,17 @@
 import * as React from "react"
 import {
-  AudioWaveform,
+  // AudioWaveform,
   BookOpen,
   Bot,
-  Command,
+  // Command,
   Frame,
-  GalleryVerticalEnd,
+  // GalleryVerticalEnd,
   LayoutDashboard,
   Map,
   PieChart,
   Settings2,
+  Shield,
+  ShoppingBag,
   SquareTerminal,
 } from "lucide-react"
 
@@ -25,6 +27,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { NavDashboard } from "./nav-dashboard"
+import { Logo } from "../common/Logo"
 
 
 // This is sample data.
@@ -37,19 +40,19 @@ const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: Logo,
       plan: "Enterprise",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
+    // {
+    //   name: "Acme Corp.",
+    //   logo: AudioWaveform,
+    //   plan: "Startup",
+    // },
+    // {
+    //   name: "Evil Corp.",
+    //   logo: Command,
+    //   plan: "Free",
+    // },
   ],
   navDashboard:{
     title: "Dashboard",
@@ -79,67 +82,71 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Staff Management",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "/genesis",
+          title: "Staff",
+          url: "/staff",
         },
         {
-          title: "Explorer",
-          url: "/explorer",
+          title: "View Staff",
+          url: "/view-staff",
         },
         {
-          title: "Quantum",
-          url: "/quantum",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "/introduction",
+          title: "Role",
+          url: "/role",
         },
         {
-          title: "Get Started",
-          url: "/get-started",
+          title: "View Role",
+          url: "/view-role",
         },
         {
-          title: "Tutorials",
-          url: "/tutorials",
+          title: "Permission",
+          url: "/permission",
         },
         {
-          title: "Changelog",
-          url: "/changelog",
+          title: "View Permission",
+          url: "/view-permission",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "E-Commerce",
       url: "#",
-      icon: Settings2,
+      icon: ShoppingBag,
       items: [
         {
-          title: "General",
-          url: "/general",
+          title: "Overview",
+          url: "/overview",
         },
         {
-          title: "Team",
-          url: "/team",
+          title: "Setting",
+          url: "/account-setting",
+        },
+      ],
+    },
+    {
+      title: "Authentication",
+      url: "#",
+      icon: Shield,
+      items: [
+        {
+          title: "Register",
+          url: "/register",
         },
         {
-          title: "Billing",
-          url: "/billing",
+          title: "Login",
+          url: "/login",
         },
         {
-          title: "Limits",
-          url: "/limits",
+          title: "Forgot Password",
+          url: "/forgot-password",
+        },
+        {
+          title: "New Password",
+          url: "/new-password",
         },
       ],
     },
@@ -178,16 +185,12 @@ const data = {
           url: "/general",
         },
         {
-          title: "Team",
-          url: "/team",
+          title: "Account",
+          url: "/account",
         },
         {
-          title: "Billing",
-          url: "/billing",
-        },
-        {
-          title: "Limits",
-          url: "/limits",
+          title: "Appearance",
+          url: "/appearance",
         },
       ],
     },
