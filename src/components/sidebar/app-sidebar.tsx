@@ -10,6 +10,7 @@ import {
   Map,
   PieChart,
   Settings2,
+  Shield,
   SquareTerminal,
 } from "lucide-react"
 
@@ -79,67 +80,71 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Staff Management",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "/genesis",
+          title: "Staff",
+          url: "/staff",
         },
         {
-          title: "Explorer",
-          url: "/explorer",
+          title: "View Staff",
+          url: "/view-staff",
         },
         {
-          title: "Quantum",
-          url: "/quantum",
+          title: "Role",
+          url: "/role",
+        },
+        {
+          title: "View Role",
+          url: "/view-role",
+        },
+        {
+          title: "Permission",
+          url: "/permission",
+        },
+        {
+          title: "View Permission",
+          url: "/view-permission",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Account",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
-          url: "/introduction",
+          title: "Overview",
+          url: "/overview",
         },
         {
-          title: "Get Started",
-          url: "/get-started",
-        },
-        {
-          title: "Tutorials",
-          url: "/tutorials",
-        },
-        {
-          title: "Changelog",
-          url: "/changelog",
+          title: "Setting",
+          url: "/account-setting",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Authentication",
       url: "#",
-      icon: Settings2,
+      icon: Shield,
       items: [
         {
-          title: "General",
-          url: "/general",
+          title: "Register",
+          url: "/register",
         },
         {
-          title: "Team",
-          url: "/team",
+          title: "Login",
+          url: "/login",
         },
         {
-          title: "Billing",
-          url: "/billing",
+          title: "Forgot Password",
+          url: "/forgot-password",
         },
         {
-          title: "Limits",
-          url: "/limits",
+          title: "New Password",
+          url: "/new-password",
         },
       ],
     },
@@ -180,14 +185,6 @@ const data = {
         {
           title: "Team",
           url: "/team",
-        },
-        {
-          title: "Billing",
-          url: "/billing",
-        },
-        {
-          title: "Limits",
-          url: "/limits",
         },
       ],
     },

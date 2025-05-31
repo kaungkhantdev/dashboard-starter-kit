@@ -5,7 +5,10 @@ import Loading from '@/components/common/Loading';
 // Lazy-loaded pages
 // const Home = lazy(() => import('../pages/Home'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
-// const Register = lazy(() => import('./pages/Register'));
+const Register = lazy(() => import('../pages/authentication/Register'));
+const Login = lazy(() => import('../pages/authentication/Login'));
+const ForgotPassword = lazy(() => import('../pages/authentication/ForgotPassword'));
+const NewPassword = lazy(() => import('../pages/authentication/NewPassword'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 export const Routes: React.FC = () => {
@@ -19,6 +22,10 @@ export const Routes: React.FC = () => {
 
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/new-password" element={<NewPassword />} />
         
         {/* <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
