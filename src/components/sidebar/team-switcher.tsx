@@ -69,7 +69,10 @@ export function TeamSwitcher({
               {/* Teams */}
               Dashboard
             </DropdownMenuLabel>
-            {teams.map((team, index) => (
+            {teams.map((
+              team, 
+              // index
+            ) => (
               <DropdownMenuItem
                 key={team.name}
                 onClick={() => setActiveTeam(team)}
