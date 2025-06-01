@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/sidebar"
 import { NavDashboard } from "./nav-dashboard"
 import { Logo } from "../common/Logo"
+import { NavSetting } from "./nav-setting"
 
 
 // This is sample data.
@@ -35,7 +36,7 @@ const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "https://github.com/shadcn.png",
   },
   teams: [
     {
@@ -54,11 +55,16 @@ const data = {
     //   plan: "Free",
     // },
   ],
-  navDashboard:{
+  navDashboard: {
     title: "Dashboard",
     url: "/dashboard",
     icon: LayoutDashboard,
     isActive: true,
+  },
+  navSetting: {
+    title: "Setting",
+    url: "/setting",
+    icon: Settings2,
   },
   navMain: [
     {
@@ -151,7 +157,7 @@ const data = {
       ],
     },
   ],
-  navSetting: [
+  navDocumentation: [
     {
       title: "Documentation",
       url: "#",
@@ -172,25 +178,6 @@ const data = {
         {
           title: "Changelog",
           url: "/changelog",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "/general",
-        },
-        {
-          title: "Account",
-          url: "/account",
-        },
-        {
-          title: "Appearance",
-          url: "/appearance",
         },
       ],
     },
@@ -223,7 +210,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavDashboard item={data.navDashboard}/>
         <NavMain items={data.navMain} subTitle="MAIN MENU" />
-        <NavMain items={data.navSetting} subTitle="SETTINGS" />
+        <NavMain items={data.navDocumentation} subTitle="DOCUMENTATION" />
+        <NavSetting item={data.navSetting} subTitle="SETTINGS"/>
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>

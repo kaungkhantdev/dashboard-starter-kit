@@ -9,6 +9,7 @@ const Register = lazy(() => import('../pages/authentication/Register'));
 const Login = lazy(() => import('../pages/authentication/Login'));
 const ForgotPassword = lazy(() => import('../pages/authentication/ForgotPassword'));
 const NewPassword = lazy(() => import('../pages/authentication/NewPassword'));
+const Setting = lazy(() => import('../pages/Setting'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 export const Routes: React.FC = () => {
@@ -26,6 +27,7 @@ export const Routes: React.FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/new-password" element={<NewPassword />} />
+          <Route path="/setting" element={<Setting />} />
         
         {/* <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
