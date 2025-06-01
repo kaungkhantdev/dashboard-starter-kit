@@ -1,4 +1,4 @@
-import { SettingTabs } from "@/features/setting";
+import { AccountContent, AppearanceContent, GeneralContent, SettingTabs } from "@/features/setting";
 
 const data = {
   user: {
@@ -22,31 +22,7 @@ const data = {
   ],
 }
 
-function GeneralContent() {
-    return (
-        <>
-        <h1>Hi I am General Content.</h1>
-        </>
-    )
-}
-
-function AccountContent() {
-    return (
-        <>
-        <h1>Hi I am Account Content.</h1>
-        </>
-    )
-}
-
-function AppearanceContent() {
-    return (
-        <>
-        <h1>Hi I am Appearance Content.</h1>
-        </>
-    )
-}
-
-export default function General() {
+export default function Setting() {
   return (
     <div className="flex flex-1 flex-col">
       <div className="@container/main flex flex-1 flex-col gap-2">

@@ -15,8 +15,8 @@ export function SettingTabs({
     }[]
 }) {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-6">
-      <Tabs defaultValue={tabs[0].trigger}>
+    <div className="flex w-full flex-col gap-6">
+      <Tabs defaultValue={tabs[0].trigger} className="gap-4 md:gap-6">
         <TabsList className=" bg-background ">
           {
             tabs.map((item) => (

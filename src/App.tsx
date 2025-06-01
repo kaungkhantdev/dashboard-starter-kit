@@ -4,7 +4,7 @@ import { Routes } from "./router/routes";
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <MainLayout>
         <Routes />
       </MainLayout>
