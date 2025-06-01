@@ -14,7 +14,7 @@ const AppearanceContent = () => {
         
         {/* Theme color */}
         <div className="grid grid-cols-6 border-b border-gray-100 dark:border-gray-900 w-full py-5">
-            <div className="col-span-2">
+            <div className="col-span-3 lg:col-span-2">
                 <span className="text-sm font-medium">Theme Color</span>
                 <br />
                 <span className="text-sm text-muted-foreground">
@@ -43,7 +43,7 @@ const AppearanceContent = () => {
 
         {/* Device Theme */}
         <div className="grid grid-cols-6 border-b border-gray-100 dark:border-gray-900 w-full py-5">
-            <div className="col-span-2">
+            <div className="col-span-3 lg:col-span-2">
                 <span className="text-sm font-medium">Device Theme</span>
                 <br />
                 <span className="text-sm text-muted-foreground">
@@ -52,13 +52,13 @@ const AppearanceContent = () => {
             </div>
             <div className="col-span-3">
                 <div className="flex items-center space-x-3">
-                    <RadioGroup defaultValue={theme} className="flex">
-                        <div className="flex gap-3 border p-3 rounded-lg data-[state=checked]:border-green-500">
+                    <RadioGroup defaultValue={theme} className="flex flex-col lg:flex-row">
+                        <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("light")} value="light" id="r1" />
                             <Label htmlFor="r1">
                                 <div>
                                     <h1 className="mb-3">Light Mode</h1>
-                                    <div className="">
+                                    <div className="hidden lg:block">
                                         <div className="space-y-2 rounded-lg bg-[#ecedef] p-2">
                                             <div className="space-y-2 rounded-md bg-white p-2 shadow-xs">
                                                 <Skeleton className="h-2 w-[80px] rounded-lg bg-[#ecedef]"/>
@@ -80,12 +80,12 @@ const AppearanceContent = () => {
                                 </div>
                             </Label>
                         </div>
-                        <div className="flex gap-3 border p-3 rounded-lg data-[state=checked]:border-green-500">
+                        <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("dark")} value="dark" id="r2" />
                             <Label htmlFor="r2">
                                 <div>
                                     <h1 className="mb-3">Dark Mode</h1>
-                                    <div className="">
+                                   <div className="hidden lg:block">
                                         <div className="space-y-2 rounded-lg bg-gray-900 p-2">
                                             <div className="space-y-2 rounded-md bg-gray-800 p-2 shadow-xs">
                                                 <Skeleton className="h-2 w-[80px] rounded-lg bg-gray-400"/>
@@ -107,12 +107,12 @@ const AppearanceContent = () => {
                                 </div>
                             </Label>
                         </div>
-                        <div className="flex gap-3 border p-3 rounded-lg data-[state=checked]:border-green-500">
+                        <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("system")} value="system" id="r3" />
                             <Label htmlFor="r3">
                                 <div>
                                     <h1 className="mb-3">System</h1>
-                                    <div className="">
+                                    <div className="hidden lg:block">
                                         <div className="space-y-2 rounded-lg bg-blue-900 p-2">
                                             <div className="space-y-2 rounded-md bg-blue-800 p-2 shadow-xs">
                                                 <Skeleton className="h-2 w-[80px] rounded-lg bg-blue-400"/>
@@ -141,11 +141,11 @@ const AppearanceContent = () => {
 
         {/* Language */}
         <div className="grid grid-cols-6 border-b border-gray-100 dark:border-gray-900 w-full py-5">
-            <div className="col-span-2">
+            <div className="col-span-3 lg:col-span-2">
                 <span className="text-sm font-medium">Language</span>
                 <br />
                 <span className="text-sm text-muted-foreground">
-                   Default language for dashbard
+                   Default language for dashboard
                 </span>
             </div>
             <div className="col-span-3">
