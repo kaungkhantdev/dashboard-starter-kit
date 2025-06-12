@@ -1,8 +1,7 @@
-import { ChartArea, SectionCards } from '@/features/dashboard'
-import data from "../utils/data.json"
-import { DataTable } from '@/components/common/DataTable'
+import { DataTable } from "@/components/common/DataTable"
+import data from "../../utils/data.json"
 
-const Dashboard = () => {
+const Staff = () => {
   return (
     // <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
     //     <div className="grid auto-rows-min gap-4 md:grid-cols-3">
@@ -15,10 +14,10 @@ const Dashboard = () => {
     <div className="flex flex-1 flex-col">
       <div className="@container/main flex flex-1 flex-col gap-2">
         <div className="flex flex-col gap-4 pb-2 md:gap-6 md:pb-4">
-          <SectionCards />
-          <div className="px-4 lg:px-6">
+          {/* <SectionCards /> */}
+          {/* <div className="px-4 lg:px-6">
             <ChartArea />
-          </div>
+          </div> */}
           <DataTable data={data} />
         </div>
       </div>
@@ -26,4 +25,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Staff

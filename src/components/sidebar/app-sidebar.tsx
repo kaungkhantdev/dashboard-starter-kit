@@ -94,27 +94,23 @@ const data = {
       items: [
         {
           title: "Staff",
-          url: "/staff",
+          url: "/staff-management",
         },
         {
-          title: "View Staff",
-          url: "/view-staff",
+          title: "Detail Staff",
+          url: "/detail-staff",
         },
         {
           title: "Role",
           url: "/role",
         },
         {
-          title: "View Role",
-          url: "/view-role",
+          title: "Detail Role",
+          url: "/detail-role",
         },
         {
           title: "Permission",
           url: "/permission",
-        },
-        {
-          title: "View Permission",
-          url: "/view-permission",
         },
       ],
     },
