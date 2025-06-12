@@ -22,10 +22,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/components/ui/toggle-group"
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
@@ -169,26 +165,10 @@ export function ChartArea() {
           <span className="@[540px]/card:hidden">Last 3 months</span>
         </CardDescription>
         <div className="absolute right-4 top-4">
-          <ToggleGroup
-            type="single"
-            value={timeRange}
-            onValueChange={setTimeRange}
-            variant="outline"
-            className="@[767px]/card:flex hidden"
-          >
-            <ToggleGroupItem value="90d" className="h-8 px-2.5 border-primary/5">
-              Last 3 months
-            </ToggleGroupItem>
-            <ToggleGroupItem value="30d" className="h-8 px-2.5 border-primary/5">
-              Last 30 days
-            </ToggleGroupItem>
-            <ToggleGroupItem value="7d" className="h-8 px-2.5 border-primary/5">
-              Last 7 days
-            </ToggleGroupItem>
-          </ToggleGroup>
           <Select value={timeRange} onValueChange={setTimeRange}>
             <SelectTrigger
-              className="@[767px]/card:hidden flex w-40"
+              className="w-40"
+              size="sm"
               aria-label="Select a value"
             >
               <SelectValue placeholder="Last 3 months" />
