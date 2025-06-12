@@ -15,6 +15,9 @@ const Dashboard = () => {
     <div className="flex flex-1 flex-col">
       <div className="@container/main flex flex-1 flex-col gap-2">
         <div className="flex flex-col gap-4 pb-2 md:gap-6 md:pb-4">
+          <div className="px-4 lg:px-6 ">
+            <h1 className=" text-lg font-medium ">Welcome back, Sophie!</h1>
+          </div>
           <SectionCards />
           <div className="px-4 lg:px-6">
             <ChartArea />

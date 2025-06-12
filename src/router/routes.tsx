@@ -11,6 +11,8 @@ const ForgotPassword = lazy(() => import('../pages/authentication/ForgotPassword
 const NewPassword = lazy(() => import('../pages/authentication/NewPassword'));
 const Staff = lazy(() => import('../pages/staff-management/Staff'));
 const Role = lazy(() => import('../pages/staff-management/Role'));
+const RoleDetail = lazy(() => import('../pages/staff-management/RoleDetail'));
+const Permission = lazy(() => import('../pages/staff-management/Permission'));
 const Setting = lazy(() => import('../pages/Setting'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
@@ -32,6 +34,8 @@ export const Routes: React.FC = () => {
           <Route path="/setting" element={<Setting />} />
           <Route path="/staff-management" element={<Staff />} />
           <Route path="/role" element={<Role />} />
+          <Route path="/role-detail" element={<RoleDetail />} />
+          <Route path="/permission" element={<Permission />} />
         
         {/* <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />

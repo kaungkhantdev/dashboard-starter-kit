@@ -97,16 +97,16 @@ const data = {
           url: "/staff-management",
         },
         {
-          title: "Detail Staff",
-          url: "/detail-staff",
+          title: "Staff Detail",
+          url: "/staff-detail",
         },
         {
           title: "Role",
           url: "/role",
         },
         {
-          title: "Detail Role",
-          url: "/detail-role",
+          title: "Role Detail",
+          url: "/role-detail",
         },
         {
           title: "Permission",

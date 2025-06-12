@@ -1,4 +1,5 @@
 import { ShieldCheck } from "lucide-react"
+import { useNavigate } from "react-router"
 const data = [
     {
         title: 'Admin Roles',
@@ -89,17 +90,18 @@ const data = [
 ]
 
 export function RoleCards() {
+  const navigate = useNavigate();
   return (
     <div className="gap-4">
       {
-        data.map((item) => (
-          <div className=" mb-10 ">
+        data.map((item, index) => (
+          <div key={index} className=" mb-10 ">
             <div className=" mb-3 px-4 lg:px-6 ">
                 <h1 className=" text-md font-medium ">{item.title}</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {item.roles.map((i) => (
-                    <div className="mx-1 lg:mx-3 flex items-start gap-3 transition cursor-pointer hover:bg-sidebar-accent rounded-lg p-3">
+                    <div onClick={() => navigate('/role-detail')} className="mx-1 lg:mx-3 flex items-start gap-3 transition cursor-pointer hover:bg-sidebar-accent rounded-lg p-3">
                         <div className="p-2 rounded-md bg-primary/5">
                             {i.icon}
                         </div>
