@@ -29,7 +29,7 @@ export default function Setting() {
         <div className="flex flex-col gap-4 pb-2 md:gap-6 md:pb-4">
             <div className="px-4 lg:px-6">
                <div className="flex flex-col gap-1">
-                    <h1 className="text-xl font-bold">Sophie Chamberlain</h1>
+                    <h1 className="text-lg font-medium">Setting Management</h1>
                     <div className=" text-sm">
                         Manage your details and personal perferences here.
                     </div>
