@@ -15,9 +15,11 @@ export default function StaffDetail() {
                 </div>
            </div>
            <div className="px-4 lg:px-6">
-                <StaffDetailInfo />
+              <StaffDetailInfo />
            </div>
-           <StaffDetailActivity data={data} />
+           <div className="px-4 lg:px-6">
+              <StaffDetailActivity data={data} />
+           </div>
         </div>
       </div>
     </div>

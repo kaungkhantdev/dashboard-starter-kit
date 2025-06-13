@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Switch } from "@/components/ui/switch"
+import { StaffDetailActivity } from "@/features/staff-management"
+import data from "../../../utils/data.json"
 
 const AccountContent = () => {
   return (
     <div className="w-full">
         <div className="pb-2 border-b border-gray-100 dark:border-gray-900">
-            <h2 className="">Basics</h2>
+            <h2 className="">Account</h2>
         </div>
         
         {/* Photo */}
@@ -74,42 +73,8 @@ const AccountContent = () => {
             </div>
         </div>
 
-        <div className="pb-2 pt-6 border-b border-gray-100 dark:border-gray-900">
-            <h2 className="">Preferences</h2>
-        </div>
-        
-        {/* Automatic */}
-        <div className="grid grid-cols-6 border-b border-gray-100 dark:border-gray-900 w-full py-5">
-            <div className="col-span-3 lg:col-span-2">
-                <span className="text-sm font-medium">Automatic Time</span>
-            </div>
-            <div className="col-span-2 lg:col-span-3">
-                <div className="flex items-center space-x-2">
-                    <Switch id="airplane-mode" />
-                    <Label htmlFor="airplane-mode">GMT +07:00</Label>
-                </div>
-            </div>
-        </div>
-
-        {/* Language */}
-        <div className="grid grid-cols-6 border-b border-gray-100 dark:border-gray-900 w-full py-5">
-            <div className="col-span-3 lg:col-span-2">
-                <span className="text-sm font-medium">Language</span>
-                <br />
-                <span className="text-sm text-muted-foreground">
-                   Default language for dashboard
-                </span>
-            </div>
-            <div className="col-span-2 lg:col-span-3">
-                <Select defaultValue="english_uk">
-                    <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Language" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="english_uk">English UK</SelectItem>
-                    </SelectContent>
-                </Select>
-            </div>
+        <div className="mt-5">
+            <StaffDetailActivity data={data} />
         </div>
     </div>
   )
