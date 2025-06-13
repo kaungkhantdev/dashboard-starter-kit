@@ -47,7 +47,7 @@ const AppearanceContent = () => {
                 <span className="text-sm font-medium">Device Theme</span>
                 <br />
                 <span className="text-sm text-muted-foreground">
-                    Change light or dark or system
+                    Change various mode
                 </span>
             </div>
             <div className="col-span-3">
@@ -55,7 +55,7 @@ const AppearanceContent = () => {
                     <RadioGroup defaultValue={theme} className="flex flex-col lg:flex-row">
                         <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("light")} value="light" id="r1" />
-                            <Label htmlFor="r1">
+                            <Label htmlFor="r1" className=" cursor-pointer ">
                                 <div>
                                     <h1 className="mb-3">Light Mode</h1>
                                     <div className="hidden lg:block">
@@ -82,7 +82,7 @@ const AppearanceContent = () => {
                         </div>
                         <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("dark")} value="dark" id="r2" />
-                            <Label htmlFor="r2">
+                            <Label htmlFor="r2" className=" cursor-pointer ">
                                 <div>
                                     <h1 className="mb-3">Dark Mode</h1>
                                    <div className="hidden lg:block">
@@ -109,7 +109,7 @@ const AppearanceContent = () => {
                         </div>
                         <div className="flex gap-3 lg:border lg:p-3 rounded-lg data-[state=checked]:border-green-500">
                             <RadioGroupItem onClick={() => setTheme("system")} value="system" id="r3" />
-                            <Label htmlFor="r3">
+                            <Label htmlFor="r3" className=" cursor-pointer ">
                                 <div>
                                     <h1 className="mb-3">System</h1>
                                     <div className="hidden lg:block">
@@ -145,7 +145,7 @@ const AppearanceContent = () => {
                 <span className="text-sm font-medium">Language</span>
                 <br />
                 <span className="text-sm text-muted-foreground">
-                   Default language for dashboard
+                   Default language
                 </span>
             </div>
             <div className="col-span-3">
