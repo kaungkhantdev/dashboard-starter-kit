@@ -20,7 +20,7 @@ export function SettingTabs({
         <TabsList className=" bg-background ">
           {
             tabs.map((item) => (
-                <TabsTrigger value={item.trigger} className=" mr-2 data-[state=active]:bg-primary/10 data-[state=active]:text-primary dark:border-0 dark:data-[state=active]:bg-primary/10 dark:data-[state=active]:text-primary data-[state=active]:shadow-none capitalize">{formatPathToTitle(item.trigger)}</TabsTrigger>
+                <TabsTrigger value={item.trigger} className="cursor-pointer mr-2 data-[state=active]:bg-primary/10 data-[state=active]:text-primary dark:border-0 dark:data-[state=active]:bg-primary/10 dark:data-[state=active]:text-primary data-[state=active]:shadow-none capitalize">{formatPathToTitle(item.trigger)}</TabsTrigger>
             ))
           }
         </TabsList>
