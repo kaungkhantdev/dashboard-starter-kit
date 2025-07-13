@@ -16,6 +16,7 @@ const RoleDetail = lazy(() => import('../pages/staff-management/RoleDetail'));
 const Permission = lazy(() => import('../pages/staff-management/Permission'));
 const Setting = lazy(() => import('../pages/Setting'));
 const NotFound = lazy(() => import('../pages/NotFound'));
+const Editor = lazy(() => import('../pages/play-ground/Editor'));
 
 export const Routes: React.FC = () => {
   return (
@@ -38,6 +39,7 @@ export const Routes: React.FC = () => {
           <Route path="/role-detail" element={<RoleDetail />} />
           <Route path="/permission" element={<Permission />} />
           <Route path="/staff-detail" element={<StaffDetail />} />
+          <Route path="/editor" element={<Editor />} />
         
         {/* <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
