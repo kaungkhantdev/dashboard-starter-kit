@@ -78,12 +78,8 @@ const data = {
           url: "/editor",
         },
         {
-          title: "Starred",
-          url: "/starred",
-        },
-        {
-          title: "Settings",
-          url: "/settings",
+          title: "Examples",
+          url: "/examples",
         },
       ],
     },
