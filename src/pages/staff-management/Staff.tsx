@@ -1,5 +1,4 @@
 import { StaffDataTable } from "@/features/staff-management"
-import data from "../../utils/data.json"
 import { Button } from "@/components/ui/button"
 import { PlusIcon } from "lucide-react"
 
@@ -16,7 +15,7 @@ const Staff = () => {
                 <span className="hidden lg:inline">Add Staff</span>
             </Button>
           </div>
-          <StaffDataTable data={data} />
+          <StaffDataTable />
         </div>
       </div>
     </div>

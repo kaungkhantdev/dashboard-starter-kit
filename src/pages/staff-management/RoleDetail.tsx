@@ -1,5 +1,4 @@
 import { Role } from "@/features/staff-management"
-import data from "../../utils/data.json"
 import { ShieldCheck } from "lucide-react"
 
 const RoleDetail = () => {
@@ -32,7 +31,7 @@ const RoleDetail = () => {
               </div>
             </div>
           </div>
-          <Role data={data}/>
+          <Role />
           {/* <div className="px-4 lg:px-6">
           </div> */}
         </div>

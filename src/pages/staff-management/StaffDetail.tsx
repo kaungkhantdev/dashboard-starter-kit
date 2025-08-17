@@ -1,5 +1,4 @@
-import { StaffDetailActivity, StaffDetailInfo } from "@/features/staff-management";
-import data from "../../utils/data.json"
+import { StaffDataTable, StaffDetailInfo } from "@/features/staff-management";
 
 export default function StaffDetail() {
   return (
@@ -18,7 +17,7 @@ export default function StaffDetail() {
               <StaffDetailInfo />
            </div>
            <div className="px-4 lg:px-6">
-              <StaffDetailActivity data={data} />
+              <StaffDataTable />
            </div>
         </div>
       </div>
