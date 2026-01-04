@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { StaffDetailActivity } from "@/features/staff-management"
-import data from "../../../utils/data.json"
+import { StaffDataTable } from "@/features/staff-management"
 
 const AccountContent = () => {
   return (
@@ -74,7 +73,7 @@ const AccountContent = () => {
         </div>
 
         <div className="mt-5">
-            <StaffDetailActivity data={data} />
+            <StaffDataTable/>
         </div>
     </div>
   )
